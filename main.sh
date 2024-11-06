@@ -17,7 +17,8 @@ if [ "$answer" = 'n' ] || [ "$answer" = 'N' ]; then
     # Skip the setup and continue with the rest of the script
     echo "[Server]: Skipping setup..."
 elif [ "$answer" = 'y' ] || [ "$answer" = 'Y' ]; then
-    sudo apt install netcat
+    sudo apt install nc
+    chmod +x save.sh
 else
     echo "Invalid Input. Exiting file..."
     exit
